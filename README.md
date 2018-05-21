@@ -9,7 +9,7 @@ data.filterNonNumeric = function() {
   const result = [];
   Object.keys(this).forEach((key) => {
     if (typeof(this[key]) === "number") {
-        result.push(this[key]);
+      result.push(this[key]);
     }
   });
   return result;
@@ -22,8 +22,8 @@ However if you require the numbers which are in string types then the following 
 data.filterNonNumeric = function() { 
   const result = [];
   Object.keys(this).forEach((key) => {
-	if ((typeof(this[key]) !== "object") && (!isNaN(this[key]))) {
-        result.push(this[key]);
+    if ((typeof(this[key]) !== "object") && (!isNaN(this[key]))) {
+      result.push(this[key]);
     }
   });
   return result;
