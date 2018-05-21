@@ -34,6 +34,12 @@ data.filterNonNumeric = function() {
 
 Included in this repository is the codebase for the PHP test
 
+Composer has been used for autoloading, and PHPUnit for testing.
+
+Docker is suggested for quickly testing the code if it is available, otherwise, PHP >= 7.1 is required.
+
+If not using Docker, then in the commands below, simply remove the "docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine " part from each command.
+
 ### Setting up
 
 Use composer to install the required packages (phpunit for testing), and autoloader.
@@ -41,6 +47,8 @@ Use composer to install the required packages (phpunit for testing), and autoloa
 In docker ```docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine php ./composer.phar install```
 
 Or using local PHP (version 7+) php ./composer.phar install
+
+### Running
 
 You can run the code using PHP7 through the entry point bin/run
 
