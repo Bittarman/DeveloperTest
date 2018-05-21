@@ -38,7 +38,7 @@ Composer has been used for autoloading, and PHPUnit for testing.
 
 Docker is suggested for quickly testing the code if it is available, otherwise, PHP >= 7.1 is required.
 
-If not using Docker, then in the commands below, simply remove the "docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine " part from each command.
+If not using Docker, then in the commands below, simply remove the ```docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine``` part from each command.
 
 ### Installing
 
@@ -46,7 +46,7 @@ Use composer to install the required packages (phpunit for testing), and autoloa
 
 In docker ```docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine php ./composer.phar install```
 
-Or using local PHP (version 7+) php ./composer.phar install
+Or using local PHP (version 7+) ```php ./composer.phar install```
 
 ### Running
 
