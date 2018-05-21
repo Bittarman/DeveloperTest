@@ -40,7 +40,7 @@ Docker is suggested for quickly testing the code if it is available, otherwise, 
 
 If not using Docker, then in the commands below, simply remove the "docker run --rm -it -v $(pwd):/test -w /test  php:7.1-cli-alpine " part from each command.
 
-### Setting up
+### Installing
 
 Use composer to install the required packages (phpunit for testing), and autoloader.
 
