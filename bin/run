@@ -1,0 +1,26 @@
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$args = getopt('o:', ['output:']);
+if (false === $args || empty($args)) {
+    echo <<<HEREDOC
+    Creates salary and bonus payment date report
+    Usage: bin/run [flags]
+        flags:
+          -o --output: Output filename
+
+HEREDOC;
+    exit(1);
+}
+$filename = $args['o'] ?: $args['output'];
+
+try {
+    $processor = new App\PaymentDateGenerator($filename);
+    $processor->run();
+    echo "\nDone";
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+} finally {
+    echo "\n";
+}
